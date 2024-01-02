@@ -1,1 +1,1 @@
-![](http://https://profile-counter.glitch.me/3ayonara/count.svg)
+![](https://profile-counter.glitch.me/3ayonara/count.svg)
