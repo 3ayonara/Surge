@@ -4,4 +4,4 @@
 > Module : https://raw.githubusercontent.com/3ayonara/surge/main/Module/EmbyPremiere/EmbyPremiere.sgmodule
 
 
-Author : [@yichahucha](https://github.com/yichahucha)
+Author : [@yichahucha](https://github.com/yichahucha) 
