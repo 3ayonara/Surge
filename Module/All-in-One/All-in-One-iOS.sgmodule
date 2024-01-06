@@ -51,9 +51,13 @@ Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api
 Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
 Sub-Store Sync=type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
 
+# > Not Boring
+Not Boring1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/3ayonara/Surge/main/Scripts/NotBoring/NotBoring.js
+Not Boring2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/3ayonara/Surge/main/Scripts/NotBoring/NotBoring.js,script-update-interval=0
+
 [Map Local]
 ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/3ayonara/Surge/main/Scripts/CaiYun/caiyun.json"
 ^https?:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/3ayonara/Surge/main/Scripts/CaiYun/reject-dict.json"
 
 [MITM]
-hostname = %APPEND% www.google.cn, www.g.cn, *.baidu.com, www.zhihu.com, security.wechat.com, weixin110.qq.com, *.hdslb.com, biz.cyapi.cn,wrapper.cyapi.cn,api.caiyunapp.com, mb3admin.com, api.m.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store
+hostname = %APPEND% www.google.cn, www.g.cn, *.baidu.com, www.zhihu.com, security.wechat.com, weixin110.qq.com, *.hdslb.com, biz.cyapi.cn,wrapper.cyapi.cn,api.caiyunapp.com, mb3admin.com, api.m.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, api.revenuecat.com
